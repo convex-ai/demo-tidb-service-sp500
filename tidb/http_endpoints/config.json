@@ -1,0 +1,67 @@
+[
+  {
+    "name": "sp500byweight",
+    "description": "sp500 company ",
+    "method": "GET",
+    "endpoint": "/v1/industry/weight",
+    "data_source": {
+      "cluster_id": 1379661944646259153
+    },
+    "params": [],
+    "settings": {
+      "timeout": 5000,
+      "row_limit": 50
+    },
+    "tag": "Default",
+    "batch_operation": 0,
+    "sql_file": "sql/GET-v1-industry-weight.sql",
+    "type": "sql_endpoint",
+    "return_type": "json"
+  },
+  {
+    "name": "IndustryCap",
+    "description": "Industry Sector Market Cap Comparison.",
+    "method": "GET",
+    "endpoint": "/v1/industry/cap",
+    "data_source": {
+      "cluster_id": 1379661944646259153
+    },
+    "params": [],
+    "settings": {
+      "timeout": 5000,
+      "row_limit": 50
+    },
+    "tag": "Default",
+    "batch_operation": 0,
+    "sql_file": "sql/GET-v1-industry-cap.sql",
+    "type": "sql_endpoint",
+    "return_type": "json"
+  },
+  {
+    "name": "getCompanyByStockSymbol",
+    "description": "",
+    "method": "GET",
+    "endpoint": "/v1/industries/get",
+    "data_source": {
+      "cluster_id": 1379661944646259153
+    },
+    "params": [
+      {
+        "name": "stock_symbol",
+        "type": "string",
+        "required": 0,
+        "default": "",
+        "description": ""
+      }
+    ],
+    "settings": {
+      "timeout": 5000,
+      "row_limit": 50
+    },
+    "tag": "Default",
+    "batch_operation": 0,
+    "sql_file": "sql/GET-v1-industries-get.sql",
+    "type": "sql_endpoint",
+    "return_type": "json"
+  }
+]
